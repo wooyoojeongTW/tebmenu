@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="css/style.css">
+    <script src="jquery-1.12.4.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="testimonial-section">
+        <h1>Newjeans members</h1>
+        <div class="testimonial-pic">
+            <img class="active" src="img/minji.jpeg" alt="" data-alt="tab1">
+            <img src="img/hani.jpeg" alt=""data-alt="tab2">
+            <img src="img/dani.jpeg" alt=""data-alt="tab3">
+            <img src="img/herin.jpeg" alt=""data-alt="tab4">
+            <img src="img/heyin.jpeg" alt=""data-alt="tab5">
+        </div>
+        <div class="testimonial">
+            <div class="content active" id="tab1">
+                <p>강원도 춘천시에서 태어나 중학교 1학년 때까지 자랐다. 모 실용음악학원에서 기타 수강생으로 다니다가 해당 학원의 추천으로 지원한 쏘스뮤직의 내방 오디션에 합격하여 본격적으로 연습생이
+                    되었다. 연습생 생활을 위해 서울에 있는 신사중학교로 전학을 갔는데 당시 학교에 엄청 예쁜 학생이 전학을 왔다고 소문이 나서 난리였다고 한다. 중학교 동창에 의하면 성격도 좋았다고
+                    한다.</p>
+                    <p class="name">newjeans 민지</p>
+            </div>
+            <div class="content" id="tab2">
+                <p>호주 멜버른에서 태어나고 쭉 자란 베트남계 호주인이다. # 부모님은 모두 베트남인이며 아버지는 하노이 출신이고 어머니는 호치민 출신이다. 부모님과는 베트남어로 대화했고 부모의 고향인
+                    베트남을 여러 번 여행한 경험이 있다. 여동생과 함께 베트남 전통 의상인 아오자이를 입고 찍은 사진도 있다. 현재도 조부모님을 포함한 가족들은 호주에서 살고 있다.</p>
+                    <p class="name">newjeans 하니</p>
+            </div>
+            <div class="content" id="tab3">
+                <p>호주에서 태어나고 5살 때부터 초등학교 1학년 1학기까지 약 3년 동안 경기도 파주시 문산읍에서 거주했다.[12] # 한국에서 잠시 살았던 이유는 어머니가 자녀들이 한국어와 한국
+                    문화를 배우기 원해서였고, 아버지는 한국에서 영어 강사로 근무했다.[13] 그리고 2012년 6월 29일 초등학교 1학년 여름에 호주로 이사해서 중학교 2학년 때까지 쭉
+                    거주했다.[14] # 2019년 10월 호주 글로벌 오디션에서 합격했다. 2020년 중학교 3학년 때부터 쏘스뮤직과 ADOR에서 약 2년 반 동안 연습생으로 생활했다.[15]
+                </p><p class="name">newjeans 다니엘</p>
+            </div>
+            <div class="content" id="tab4">
+                <p>경상북도 김천시에서 태어나 서울특별시 동작구, 경기도 안양시에서 성장했다.
+                    같은 학교 동문에 의하면 학교에서 예쁜 걸로 유명했으며, 성격도 정말 착했다고 한다. 또한 연습생으로 입사하기 전 중학교 앞에서 길거리 캐스팅을 받은 적이 있다고.
+                    초등학교 시절 교내 동아리 활동으로 방송부를 했었다고 한다.
+                    중학교 동창 피셜 2학년까지 학교를 다녔다고 한다. 2020년 초반 중학교 2학년 때부터 약 2년 반 동안 연습생으로 생활했다.</p>
+                    <p class="name">newjeans 해린</p>
+            </div>
+            <div class="content" id="tab5">
+                <p>아역 모델 출신이다. 2021년 5월까지 키즈 유튜브 포켓TV[10]와 EBS 어린이 방송 프로그램 보니하니 식스댄스[11], 게임원정대에서 2020년 10월 19일~2020년
+                    12월 14일동안 활동한 경력이 있다.
+                    2017년부터 키즈플래닛 소속의 유쏘걸 1기 멤버로 활동했다. 당시 유정이라는 예명으로 활동했다.[12]
+                    놀아줘클럽에 출연 한 적이 있다. 약 2년 정도 활동하였다. 놀아줘클럽 졸업영상
+                    ‘남다른걸’ 이라는 웹드라마에 출연한 적이 있다.
+                </p>
+                <p class="name">newjeans 혜인</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('.testimonial-pic img').click(function(){
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+    
+        $('.testimonial .content').removeClass('active')
+        $('#' + $(this).attr('data-alt')).addClass('active')
+        //#tab1 == $(this).attr('data-alt')
+
+    })
+</script>
+</html>
